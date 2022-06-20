@@ -1,0 +1,18 @@
+body {
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+#submit-field {
+  border-radius: 5px;
+  border: none;
+}
+
+#submit-btn {
+  border-radius: 5px;
+  border: none;
+}
