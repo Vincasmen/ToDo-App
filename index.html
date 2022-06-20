@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo App</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/27b9d7ad5a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div>
+    <div id="input-div">
       <input
         id="submit-field"
         placeholder="Write down your to do"
@@ -16,6 +20,16 @@
       />
       <button id="submit-btn">ToDo</button>
     </div>
+
+    <div id="card"></div>
+    <card id="todo-card">
+      <div id="todo-div">
+        <p id="todo-paragraph">Here is gonna be your todo</p>
+        <button class="delete">
+          <i id="trash-icon" class="fas fa-trash-alt"></i>
+        </button>
+      </div>
+    </card>
   </body>
 
   <script src="index.js"></script>

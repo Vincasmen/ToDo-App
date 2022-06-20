@@ -1,18 +1,62 @@
 body {
+  margin: 0rem;
   padding: 1rem;
-  justify-content: center;
-  text-align: center;
-  display: flex;
   background-color: black;
   color: white;
+  font-family: sans-serif;
+}
+
+#input-div {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
 }
 
 #submit-field {
+  font-size: clamp(10px, 5vw, 30px);
   border-radius: 5px;
   border: none;
 }
 
 #submit-btn {
+  font-size: clamp(10px, 5vw, 30px);
   border-radius: 5px;
   border: none;
+  cursor: pointer;
+}
+
+#todo-card {
+  display: block;
+  justify-content: center;
+  position: relative;
+}
+
+#todo-div {
+  border-radius: 15px;
+  margin: 1rem;
+  padding: 0.2rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+#todo-paragraph {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  justify-content: center;
+}
+
+.delete {
+  float: right;
+  display: flex;
+  position: relative;
+  text-align: center;
+  margin: 0rem;
+  padding: 0rem;
+  float: right;
+  cursor: pointer;
 }
