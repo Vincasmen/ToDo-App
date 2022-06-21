@@ -7,6 +7,7 @@ body {
 }
 
 #input-div {
+  position: relative;
   margin-top: 1rem;
   margin-bottom: 2rem;
   display: flex;
@@ -16,9 +17,11 @@ body {
 }
 
 #submit-field {
+  position: relative;
   font-size: clamp(10px, 5vw, 30px);
   border-radius: 5px;
   border: none;
+  color: rgb(43, 48, 58);
 }
 
 #submit-btn {
@@ -26,10 +29,11 @@ body {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  color: rgb(43, 48, 58);
 }
 
 #todo-card {
-  display: block;
+  display: grid;
   justify-content: center;
   position: relative;
 }
@@ -39,23 +43,28 @@ body {
   margin: 1rem;
   padding: 0.2rem;
   background-color: rgb(214, 73, 51);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
   justify-content: space-around;
+  width: clamp(20rem, 25vw, 30rem);
 }
 
 #todo-paragraph {
-  background-color: rgba(184, 184, 184, 0.349);
+  background-color: rgba(255, 255, 255, 0.759);
   border-radius: 10px;
-  margin: 0rem;
-  padding: 0rem;
-  color: rgb(255, 255, 255);
+  margin: 0.5rem;
+  padding: 0.2rem;
+  color: rgb(85, 85, 85);
   text-align: center;
   position: relative;
   justify-content: center;
   font-size: 30px;
+  overflow: hidden;
 }
 
 .delete {
+  top: 30%;
+  left: 12%;
   font-size: 25px;
   color: white;
   float: right;
@@ -71,14 +80,18 @@ body {
 }
 
 #footer-div {
-  display: flex;
-  position: relative;
+  display: block;
+  position: fixed;
   bottom: 0%;
-  border-top: 1px rgb(238, 229, 233);
+  width: 100%;
+  border-top: solid 1px rgb(238, 229, 233);
+  margin: -1rem;
+  padding-bottom: 1rem;
 }
 
 #footer-paragraph {
   /* display: flex; */
+  font-size: clamp(1.1rem, 1.5vw, 3rem);
   text-align: center;
   justify-content: center;
   color: rgb(146, 220, 229);
