@@ -1,7 +1,7 @@
 body {
   margin: 0rem;
   padding: 1rem;
-  background-color: black;
+  background-color: rgb(43, 48, 58);
   color: white;
   font-family: sans-serif;
 }
@@ -35,22 +35,29 @@ body {
 }
 
 #todo-div {
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 1rem;
   padding: 0.2rem;
-  background-color: white;
+  background-color: rgb(214, 73, 51);
   display: flex;
   justify-content: space-around;
 }
 
 #todo-paragraph {
-  color: rgb(0, 0, 0);
+  background-color: rgba(184, 184, 184, 0.349);
+  border-radius: 10px;
+  margin: 0rem;
+  padding: 0rem;
+  color: rgb(255, 255, 255);
   text-align: center;
   position: relative;
   justify-content: center;
+  font-size: 30px;
 }
 
 .delete {
+  font-size: 25px;
+  color: white;
   float: right;
   display: flex;
   position: relative;
@@ -59,4 +66,24 @@ body {
   padding: 0rem;
   float: right;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+#footer-div {
+  display: flex;
+  position: relative;
+  bottom: 0%;
+  border-top: 1px rgb(238, 229, 233);
+}
+
+#footer-paragraph {
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  color: rgb(146, 220, 229);
+}
+
+#footer-paragraph-span {
+  color: crimson;
 }
