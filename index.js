@@ -1,5 +1,4 @@
 "use strict";
-
 const submitBtn = document.getElementById("submit-btn");
 const submitField = document.getElementById("submit-field");
 const submitedToDo = document.getElementById("todo-paragraph");
@@ -16,15 +15,16 @@ submitBtn.addEventListener("click", function () {
     todoCard.innerHTML = `
         <card id="todo-card">
         <div id="todo-div">
-        <p id="todo-paragraph">
+        <p class="todo-paragraph-class" id="todo-paragraph">
         ${submitField.value}
         </p>
         <button class="delete">
-          <i id="trash-icon" class="fas fa-trash-alt"></i>
-          </button>
+        <i id="trash-icon" class="fas fa-trash-alt"></i>
+        </button>
+        <input id="checkboxid" class="checkbox" type="checkbox">
           </div>
-          </card>
-          `;
+          </card>`;
+
     document.body.appendChild(todoCard);
 
     //! 2 WAY BINDIND !//
@@ -36,7 +36,22 @@ submitBtn.addEventListener("click", function () {
     const deleteBtn = document.querySelectorAll(".delete");
     for (let i = 0; i < deleteBtn.length; i++) {
       deleteBtn[i].onclick = function () {
+        console.log(deleteBtn);
         this.parentNode.remove();
+      };
+    }
+
+    const checkBtn = document.querySelector("p");
+    for (let i = 0; i < checkBtn.length; i++) {
+      checkBtn[i].onclick = function () {
+        if (target.classList === "p") {
+          target.classList.toggle(".line-through");
+        } else {
+          console.log("clicked");
+          console.log(checkBtn);
+        }
+
+        // parentNode.add(".-line-through");
       };
     }
   }

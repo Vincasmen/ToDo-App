@@ -100,3 +100,16 @@ body {
 #footer-paragraph-span {
   color: crimson;
 }
+
+.line-through {
+  text-decoration: line-through;
+  color: crimson;
+}
+
+.check-box {
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  top: 50%;
+  display: flex;
+}
