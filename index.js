@@ -40,18 +40,17 @@ submitBtn.addEventListener("click", function () {
         this.parentNode.remove();
       };
     }
+    const checkBtn = document.querySelectorAll(".checkbox");
+    const paragraph = document.querySelectorAll(".todo-paragraph-class");
 
-    const checkBtn = document.querySelector("p");
+    // for (let o = 0; o < paragraph.length; o++) {
+    // paragraph[o]
     for (let i = 0; i < checkBtn.length; i++) {
       checkBtn[i].onclick = function () {
-        if (target.classList === "p") {
-          target.classList.toggle(".line-through");
-        } else {
-          console.log("clicked");
-          console.log(checkBtn);
-        }
-
-        // parentNode.add(".-line-through");
+        paragraph[i].classList.toggle("line-through");
+        console.log("clicked");
+        console.log(checkBtn);
+        console.log(paragraph);
       };
     }
   }
