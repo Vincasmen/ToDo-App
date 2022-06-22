@@ -21,7 +21,10 @@ submitBtn.addEventListener("click", function () {
         <button class="delete">
         <i id="trash-icon" class="fas fa-trash-alt"></i>
         </button>
+        <label cl="checkbox-label">
         <input id="checkboxid" class="checkbox" type="checkbox">
+        <span class="check-box-span"></span>
+        </label>
           </div>
           </card>`;
 
@@ -48,9 +51,6 @@ submitBtn.addEventListener("click", function () {
     for (let i = 0; i < checkBtn.length; i++) {
       checkBtn[i].onclick = function () {
         paragraph[i].classList.toggle("line-through");
-        console.log("clicked");
-        console.log(checkBtn);
-        console.log(paragraph);
       };
     }
   }
