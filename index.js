@@ -15,16 +15,16 @@ submitBtn.addEventListener("click", function () {
     todoCard.innerHTML = `
         <card id="todo-card">
         <div id="todo-div">
+        <div class="paragraph-div">
         <p class="todo-paragraph-class" id="todo-paragraph">
         ${submitField.value}
         </p>
+        </div>
         <button class="delete">
         <i id="trash-icon" class="fas fa-trash-alt"></i>
         </button>
-        </label>
-
-  <label class="form-control">
-    <input class="checkbox" type="checkbox" name="checkbox-checked" />
+        <label class="form-control">
+        <input class="checkbox" type="checkbox" name="checkbox-checked" />
           </div>
           </card>`;
 
@@ -43,11 +43,12 @@ submitBtn.addEventListener("click", function () {
         this.parentNode.remove();
       };
     }
+
+    //! CHECK BOX !//
+
     const checkBtn = document.querySelectorAll(".checkbox");
     const paragraph = document.querySelectorAll(".todo-paragraph-class");
 
-    // for (let o = 0; o < paragraph.length; o++) {
-    // paragraph[o]
     for (let i = 0; i < checkBtn.length; i++) {
       checkBtn[i].onclick = function () {
         paragraph[i].classList.toggle("line-through");
