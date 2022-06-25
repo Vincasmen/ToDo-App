@@ -132,6 +132,7 @@ body {
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: none;
+  outline: none;
 }
 .edit-top {
   align-items: flex-start;
@@ -166,15 +167,12 @@ body {
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: none;
+  outline: none;
 }
 .resize-top {
   align-items: flex-start;
   padding-top: 0.95rem;
   transition: 0s;
-}
-
-.resize:focus {
-  background-color: #00000000;
 }
 
 .resizeBtn:hover {
@@ -200,6 +198,7 @@ body {
   background-color: transparent;
   border: none;
   align-items: center;
+  outline: none;
 }
 .delete-top {
   align-items: flex-start;
