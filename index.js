@@ -16,11 +16,12 @@ submitBtn.addEventListener("click", function () {
         <card id="todo-card">
         <div id="todo-div">
         <div class="paragraph-div">
-        <p class="todo-paragraph-class" id="todo-paragraph">
-        ${submitField.value}
-        
-        </p>
+        <input class="todo-paragraph-class" id="todo-paragraph"
+        value= ${submitField.value} readonly />
         </div>
+        <button class="editBtn">
+        <i id="edit-icon" class="fas fa-pen"></i>
+        </button>
         <button class="resizeBtn">
         <i id="resize-icon" class="fas fa-expand-arrows-alt"></i>
         </button>
@@ -60,12 +61,22 @@ submitBtn.addEventListener("click", function () {
     //! Resize Button !//
     const checkBoxLabel = document.querySelectorAll(".form-control");
     const resizeBtn = document.querySelectorAll(".resizeBtn");
+    const editBtn = document.querySelectorAll(".editBtn");
+
     for (let i = 0; i < resizeBtn.length; i++) {
       resizeBtn[i].onclick = function () {
         checkBoxLabel[i].classList.toggle("check-box-top");
         deleteBtn[i].classList.toggle("delete-top");
         resizeBtn[i].classList.toggle("resize-top");
+        editBtn[i].classList.toggle("edit-top");
         paragraph[i].classList.toggle("resize");
+      };
+    }
+
+    for (let i = 0; i < editBtn.length; i++) {
+      editBtn[i].onclick = function () {
+        paragraph[i].toggleAttribute("readonly");
+        paragraph[i].classList.toggle("edit-focus");
       };
     }
   }

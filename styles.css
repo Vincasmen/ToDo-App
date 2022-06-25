@@ -36,6 +36,9 @@ body {
   border-radius: 5px;
   border: none;
   color: rgb(43, 48, 58);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    0px 22px 9px -7px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 22px 9px -7px rgba(0, 0, 0, 0.23);
 }
 
 #submit-btn {
@@ -44,6 +47,15 @@ body {
   border: none;
   cursor: pointer;
   color: rgb(43, 48, 58);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    0px 22px 9px -7px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 22px 9px -7px rgba(0, 0, 0, 0.23);
+}
+
+#submit-btn:hover {
+  color: white;
+  background-color: rgb(43, 48, 58);
+  transition: ease-in-out 0.5s;
 }
 
 #todo-card {
@@ -59,12 +71,15 @@ body {
   background-color: rgb(214, 73, 51);
   display: grid;
   position: relative;
-
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   justify-items: center;
-  width: clamp(20rem, 25vw, 30rem);
+  width: clamp(22rem, 25vw, 30rem);
   transition: ease-in-out 0.5s;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    0px 22px 9px -7px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 22px 9px -7px rgba(0, 0, 0, 0.23);
 }
 
 .paragraph-div {
@@ -90,6 +105,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   resize: none;
+  border: none;
   /* word-wrap: break-word; */
   width: clamp(12rem, 15vw, 15rem);
 }
@@ -98,6 +114,40 @@ body {
   height: 6rem;
   word-wrap: break-word;
   overflow-y: scroll;
+}
+
+.editBtn {
+  position: relative;
+  padding: 0rem;
+  margin: 0rem;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  right: 0%;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 20;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: none;
+}
+.edit-top {
+  align-items: flex-start;
+  padding-top: 0.95rem;
+  transition: 0s;
+}
+
+.editBtn:hover {
+  color: rgb(43, 48, 58);
+  font-size: 25px;
+  transition: 0.2s ease-in-out;
+}
+
+.edit-focus {
+  /* border: solid 3px rgb(0, 0, 0); */
+  box-shadow: inset 0px 0px 0px 2.5px rgb(43, 48, 58);
 }
 
 .resizeBtn {
@@ -124,7 +174,7 @@ body {
 }
 
 .resizeBtn:hover {
-  color: rgb(80, 80, 80);
+  color: rgb(43, 48, 58);
   font-size: 25px;
   transition: 0.2s ease-in-out;
 }
@@ -153,7 +203,7 @@ body {
 }
 
 .delete:hover {
-  color: rgb(69, 69, 69);
+  color: rgb(43, 48, 58);
   font-size: 25px;
   transition: 0.2s ease-in-out;
   /* background-color: crimson; */
@@ -195,10 +245,7 @@ body {
   justify-content: center;
   margin: 0rem;
   padding: 0rem;
-  /* justify-content: space-between; */
   position: inherit;
-  /* grid-template-columns: 1em auto;
-  gap: 0.5em; */
   float: left;
   align-items: center;
   grid-column: 1;
@@ -208,10 +255,6 @@ body {
   align-items: flex-start;
   padding-top: 0.95rem;
 }
-
-/* .form-control + .form-control {
-  margin-top: 1em;
-} */
 
 .form-control--disabled {
   color: var(--form-control-disabled);
@@ -235,7 +278,6 @@ input[type="checkbox"] {
   border: 0.15em solid currentColor;
   border-radius: 0.15em;
   transform: translateY(-0.075em);
-
   display: grid;
   place-content: center;
 }
@@ -247,7 +289,7 @@ input[type="checkbox"]::before {
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
   transform: scale(0);
   transform-origin: bottom left;
-  transition: 120ms transform ease-in-out;
+  transition: 250ms transform ease-in-out;
   box-shadow: inset 1em 1em var(--form-control-color);
   /* Windows High Contrast Mode */
   background-color: CanvasText;
@@ -256,11 +298,6 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
-
-/* input[type="checkbox"]:focus {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
-} */
 
 input[type="checkbox"]:disabled {
   --form-control-color: var(--form-control-disabled);
