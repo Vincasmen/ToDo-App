@@ -173,6 +173,10 @@ body {
   transition: 0s;
 }
 
+.resize:focus {
+  background-color: #00000000;
+}
+
 .resizeBtn:hover {
   color: rgb(43, 48, 58);
   font-size: 25px;

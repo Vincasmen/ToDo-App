@@ -73,6 +73,8 @@ submitBtn.addEventListener("click", function () {
       };
     }
 
+    //! Edit Button !//
+
     for (let i = 0; i < editBtn.length; i++) {
       editBtn[i].onclick = function () {
         paragraph[i].toggleAttribute("readonly");
