@@ -18,6 +18,9 @@ submitBtn.addEventListener("click", function () {
         <div class="paragraph-div">
         <p class="todo-paragraph-class" id="todo-paragraph">
         ${submitField.value}
+        <button class="resizeBtn">
+        <i id="resize-icon" class="fas fa-expand-arrows-alt"></i>
+        </button>
         </p>
         </div>
         <button class="delete">
@@ -52,6 +55,15 @@ submitBtn.addEventListener("click", function () {
     for (let i = 0; i < checkBtn.length; i++) {
       checkBtn[i].onclick = function () {
         paragraph[i].classList.toggle("line-through");
+      };
+    }
+    //! Resize Button !//
+
+    const resizeBtn = document.querySelectorAll(".resizeBtn");
+    for (let i = 0; i < resizeBtn.length; i++) {
+      resizeBtn[i].onclick = function () {
+        console.log("clicked");
+        paragraph[i].classList.toggle("resize");
       };
     }
   }

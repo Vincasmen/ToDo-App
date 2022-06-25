@@ -50,37 +50,66 @@ body {
   justify-content: center;
   justify-items: center;
   width: clamp(20rem, 25vw, 30rem);
+  transition: ease-in-out 0.5s;
 }
 
 .paragraph-div {
   width: -moz-fit-content;
-  height: fit-content;
   /* display: block; */
   block-size: fit-content;
+  /* word-wrap: break-word; */
   /* background-color: crimson; */
 }
 
-#todo-paragraph {
+.todo-paragraph-class {
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0.759);
   border-radius: 10px;
   margin: 0.5rem;
   padding: 0.2rem;
   color: rgb(85, 85, 85);
-  text-align: center;
+  /* text-align: center; */
   position: relative;
   justify-content: center;
+  justify-items: center;
   font-size: 30px;
+  height: auto;
+  display: block;
+  grid-template-columns: 1fr 0.2fr;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  display: inline-block;
-  resize: none;
+  /* resize: none; */
   width: clamp(12rem, 15vw, 15rem);
 }
 
+.resize {
+  height: 6rem;
+  word-wrap: break-word;
+}
+
+.resizeBtn {
+  font-size: 22px;
+  z-index: 50;
+  position: relative;
+  justify-items: top;
+  justify-content: right;
+  display: flex;
+  color: rgb(137, 137, 137);
+  background-color: transparent;
+  border: none;
+  float: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.resizeBtn:hover {
+  transition: 0.5s;
+  color: rgb(80, 80, 80);
+  font-size: 25px;
+}
+
 .delete {
-  top: 30%;
-  left: 12%;
+  /* top: 30%; */
+  /* left: 12%; */
   font-size: 25px;
   color: white;
   float: right;
@@ -94,6 +123,13 @@ body {
   justify-items: center;
   background-color: transparent;
   border: none;
+  align-items: center;
+}
+
+.delete:hover {
+  transition: ease-in-out 0.3s;
+  color: rgb(69, 69, 69);
+  font-size: 30px;
 }
 
 #footer-div {
@@ -123,8 +159,6 @@ body {
 .line-through {
   text-decoration: line-through;
 }
-
-/* TODO Finish positioning the check-box */
 
 .form-control {
   font-size: 2rem;
