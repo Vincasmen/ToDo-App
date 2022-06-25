@@ -18,11 +18,12 @@ submitBtn.addEventListener("click", function () {
         <div class="paragraph-div">
         <p class="todo-paragraph-class" id="todo-paragraph">
         ${submitField.value}
+        
+        </p>
+        </div>
         <button class="resizeBtn">
         <i id="resize-icon" class="fas fa-expand-arrows-alt"></i>
         </button>
-        </p>
-        </div>
         <button class="delete">
         <i id="trash-icon" class="fas fa-trash-alt"></i>
         </button>
