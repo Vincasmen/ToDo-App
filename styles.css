@@ -7,6 +7,17 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+.main-heading {
+  font-size: clamp(2rem, 5vw, 5rem);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0rem;
+  color: rgb(238, 229, 233);
+  text-shadow: 4px 2px 7px #5e5e5e;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -32,19 +43,46 @@ body {
 }
 
 #submit-field {
+  padding: 0.4rem;
   position: relative;
   font-size: clamp(10px, 5vw, 30px);
   border-radius: 5px;
   border: none;
-  color: rgb(43, 48, 58);
+  outline: none;
+  background-color: rgb(37, 43, 55);
+  outline: 1px solid rgb(238, 229, 233);
+  color: rgb(238, 229, 233);
   -webkit-box-shadow: 0px 10px 13px -7px #000000,
     0px 22px 9px -7px rgba(0, 0, 0, 0.23);
   box-shadow: 0px 10px 13px -7px #000000, 0px 22px 9px -7px rgba(0, 0, 0, 0.23);
 }
 
+#submit-field:focus {
+  background-color: rgb(23, 27, 35);
+  transition: 0.4s;
+}
+
+::placeholder {
+  color: rgb(238, 229, 233);
+  opacity: 0.6;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(238, 229, 233);
+  opacity: 0.6;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(238, 229, 233);
+  opacity: 0.6;
+}
+
 #submit-btn {
   font-size: clamp(10px, 5vw, 30px);
   border-radius: 5px;
+  background-color: rgb(238, 229, 233);
   border: none;
   cursor: pointer;
   color: rgb(43, 48, 58);
@@ -54,9 +92,12 @@ body {
 }
 
 #submit-btn:hover {
-  color: white;
-  background-color: rgb(43, 48, 58);
-  transition: ease-in-out 0.5s;
+  color: rgb(238, 229, 233);
+  background-color: rgb(27, 31, 40);
+  outline: 1px solid rgb(238, 229, 233);
+  transition: ease-in-out 0.3s;
+  padding: 0.2rem;
+  font-size: 35px;
 }
 
 #todo-card {
@@ -94,7 +135,7 @@ body {
 
 .todo-paragraph-class {
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.759);
+  background-color: rgba(238, 229, 233, 0.759);
   border-radius: 10px;
   margin: 0.5rem;
   padding: 0.2rem;
@@ -102,11 +143,13 @@ body {
   position: relative;
   font-size: 30px;
   height: auto;
-  display: inline;
+  text-align: left;
+  display: flex;
   overflow: hidden;
   text-overflow: ellipsis;
   resize: none;
   border: none;
+  outline: none;
   /* word-wrap: break-word; */
   width: clamp(12rem, 15vw, 15rem);
 }
@@ -130,7 +173,7 @@ body {
   cursor: pointer;
   font-size: 22px;
   z-index: 20;
-  color: rgb(255, 255, 255);
+  color: rgb(238, 229, 233);
   background-color: transparent;
   border: none;
   -webkit-tap-highlight-color: transparent;
@@ -165,7 +208,7 @@ body {
   cursor: pointer;
   font-size: 22px;
   z-index: 20;
-  color: rgb(255, 255, 255);
+  color: rgb(238, 229, 233);
   background-color: transparent;
   border: none;
   -webkit-tap-highlight-color: transparent;
@@ -186,7 +229,7 @@ body {
   /* top: 30%; */
   /* left: 12%; */
   font-size: 22px;
-  color: white;
+  color: rgb(238, 229, 233);
   float: right;
   display: flex;
   position: relative;
@@ -242,6 +285,7 @@ body {
 }
 
 .form-control {
+  color: rgb(238, 229, 233);
   font-size: 22px;
   font-weight: bold;
   line-height: 1.1;
@@ -276,7 +320,7 @@ input[type="checkbox"] {
   margin: 0;
   cursor: pointer;
   font: inherit;
-  color: currentColor;
+  color: rgb(238, 229, 233);
   width: 1.15em;
   height: 1.15em;
   border: 0.15em solid currentColor;
