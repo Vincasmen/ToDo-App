@@ -4,6 +4,7 @@ body {
   background-color: rgb(43, 48, 58);
   color: white;
   font-family: sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::-webkit-scrollbar {
@@ -132,7 +133,7 @@ body {
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: none;
-  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .edit-top {
   align-items: flex-start;
@@ -167,7 +168,7 @@ body {
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: none;
-  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .resize-top {
   align-items: flex-start;
@@ -198,7 +199,7 @@ body {
   background-color: transparent;
   border: none;
   align-items: center;
-  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .delete-top {
   align-items: flex-start;
