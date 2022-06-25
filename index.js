@@ -43,7 +43,6 @@ submitBtn.addEventListener("click", function () {
     const deleteBtn = document.querySelectorAll(".delete");
     for (let i = 0; i < deleteBtn.length; i++) {
       deleteBtn[i].onclick = function () {
-        console.log(deleteBtn);
         this.parentNode.remove();
       };
     }
@@ -59,11 +58,13 @@ submitBtn.addEventListener("click", function () {
       };
     }
     //! Resize Button !//
-
+    const checkBoxLabel = document.querySelectorAll(".form-control");
     const resizeBtn = document.querySelectorAll(".resizeBtn");
     for (let i = 0; i < resizeBtn.length; i++) {
       resizeBtn[i].onclick = function () {
-        console.log("clicked");
+        checkBoxLabel[i].classList.toggle("check-box-top");
+        deleteBtn[i].classList.toggle("delete-top");
+        resizeBtn[i].classList.toggle("resize-top");
         paragraph[i].classList.toggle("resize");
       };
     }

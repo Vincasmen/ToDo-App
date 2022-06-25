@@ -6,6 +6,20 @@ body {
   font-family: sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(161, 161, 161);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(112, 112, 112);
+}
+
 #input-div {
   position: relative;
   margin-top: 1rem;
@@ -102,20 +116,23 @@ body {
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: none;
-
-  /* overflow: hidden;
-  text-overflow: ellipsis; */
 }
+.resize-top {
+  align-items: flex-start;
+  padding-top: 0.95rem;
+  transition: 0s;
+}
+
 .resizeBtn:hover {
-  transition: 0.5s;
   color: rgb(80, 80, 80);
   font-size: 25px;
+  transition: 0.2s ease-in-out;
 }
 
 .delete {
   /* top: 30%; */
   /* left: 12%; */
-  font-size: 25px;
+  font-size: 22px;
   color: white;
   float: right;
   display: flex;
@@ -130,11 +147,16 @@ body {
   border: none;
   align-items: center;
 }
+.delete-top {
+  align-items: flex-start;
+  padding-top: 1rem;
+}
 
 .delete:hover {
-  transition: ease-in-out 0.3s;
   color: rgb(69, 69, 69);
-  font-size: 30px;
+  font-size: 25px;
+  transition: 0.2s ease-in-out;
+  /* background-color: crimson; */
 }
 
 #footer-div {
@@ -166,7 +188,7 @@ body {
 }
 
 .form-control {
-  font-size: 2rem;
+  font-size: 22px;
   font-weight: bold;
   line-height: 1.1;
   display: flex;
@@ -181,6 +203,10 @@ body {
   align-items: center;
   grid-column: 1;
   grid-row: 1;
+}
+.check-box-top {
+  align-items: flex-start;
+  padding-top: 0.95rem;
 }
 
 /* .form-control + .form-control {
