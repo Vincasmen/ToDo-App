@@ -134,9 +134,16 @@
 <!-- <card id="todo-card">
         <div id="todo-div">
         <div class="paragraph-div">
-          <input class="todo-paragraph-class" id="todo-paragraph"
-          value= "Test"/ readonly>
+        <textarea class="todo-paragraph-class" id="todo-paragraph" rows="1" wrap="hard"  readonly>${submitField.value}</textarea>
         </div>
+        <div class="edit-save-btns">
+        <button class="editBtn">
+        <i id="edit-icon" class="fas fa-pen"></i>
+        </button>
+        <button class="saveBtn  save-hidden">
+        <i id="save-icon" class="far fa-save"></i>
+        </button>
+      </div>
         <button class="resizeBtn">
         <i id="resize-icon" class="fas fa-expand-arrows-alt"></i>
         </button>

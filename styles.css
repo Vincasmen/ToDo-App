@@ -170,6 +170,7 @@ body {
   align-items: center;
   text-align: center;
   right: 0%;
+  top: 20px;
   cursor: pointer;
   font-size: 22px;
   z-index: 20;
@@ -184,6 +185,10 @@ body {
   transition: 0s;
 }
 
+.edit-hidden {
+  display: none;
+}
+
 .editBtn:hover {
   color: rgb(43, 48, 58);
   font-size: 25px;
@@ -191,6 +196,45 @@ body {
 }
 
 .edit-focus {
+  /* border: solid 3px rgb(0, 0, 0); */
+  box-shadow: inset 0px 0px 0px 2.5px rgb(43, 48, 58);
+}
+.saveBtn {
+  position: relative;
+  padding: 0rem;
+  margin: 0rem;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  right: 0%;
+  top: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  z-index: 20;
+  color: rgb(238, 229, 233);
+  background-color: transparent;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.save-top {
+  align-items: flex-start;
+  padding-top: 0.95rem;
+  transition: 0s;
+}
+
+.save-hidden {
+  display: none;
+}
+
+.saveBtn:hover {
+  color: rgb(43, 48, 58);
+  font-size: 25px;
+  transition: 0.2s ease-in-out;
+}
+
+.save-focus {
   /* border: solid 3px rgb(0, 0, 0); */
   box-shadow: inset 0px 0px 0px 2.5px rgb(43, 48, 58);
 }
