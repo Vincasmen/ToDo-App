@@ -170,7 +170,7 @@ body {
   align-items: center;
   text-align: center;
   right: 0%;
-  top: 20px;
+  top: 18px;
   cursor: pointer;
   font-size: 22px;
   z-index: 20;
@@ -181,7 +181,7 @@ body {
 }
 .edit-top {
   align-items: flex-start;
-  padding-top: 0.95rem;
+  margin-top: 1px;
   transition: 0s;
 }
 
@@ -209,7 +209,7 @@ body {
   align-items: center;
   text-align: center;
   right: 0%;
-  top: 20px;
+  top: 18px;
   cursor: pointer;
   font-size: 22px;
   z-index: 20;
@@ -220,7 +220,7 @@ body {
 }
 .save-top {
   align-items: flex-start;
-  padding-top: 0.95rem;
+  margin-top: 1px;
   transition: 0s;
 }
 
